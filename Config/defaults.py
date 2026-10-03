@@ -1,0 +1,9 @@
+class Defaults:
+    BOT_VERSION = "2.1.0"
+    BOT_NAME = "VECTOR"
+    BOT_ASCII = "V E C T O R"
+    BOT_AUTHOR = "VECTOR"
+    MAX_MESSAGE_LENGTH = 4096
+    MAX_CAPTION_LENGTH = 1024
+    CACHE_TTL = 3600
+    DEFAULT_ACCOUNT = "main"

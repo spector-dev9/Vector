@@ -1,0 +1,1 @@
+"""VECTOR developer plugins."""

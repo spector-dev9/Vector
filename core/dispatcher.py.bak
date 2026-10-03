@@ -1,0 +1,19 @@
+"""Failure-isolating dispatcher."""
+from core.logger import setup_logger
+
+logger = setup_logger("VECTOR.dispatcher")
+
+
+def install(client, ctx) -> None:
+    original = client._handle_update
+
+    async def guarded(update):
+        try:
+            await original(update)
+        except Exception as e:
+            logger.error(f"{ctx.log_tag} update handler: {e}", exc_info=True)
+
+    try:
+        client._handle_update = guarded
+    except Exception:
+        pass

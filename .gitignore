@@ -1,0 +1,15 @@
+.env
+*.session
+*.session-journal
+data/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.idea/
+.vscode/
+.DS_Store
